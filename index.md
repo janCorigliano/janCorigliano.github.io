@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet"> <!-- where the google font comes from -->
+  <head>
+    <title>Mapping Victoria's Giant Trees</title>
+      <!-- Below is the styling for the page. Some of this is duplicated in the css file. Reminds me of the 2 ways of implementing CSS -->
+    <style>
+      Body  {
+            background-color:whitesmoke;  }
+
+      header {
+        background-color: silver;
+      }
+
+
+      P  {
+          font-size:20px; font-style:ti; color:black;
+          font-family: 'Roboto Condensed', monospace ;
+
+          }
+      a  {
+          font-size:30px;  color:black;
+          font-family: 'Roboto Condensed', monospace
+
+        }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      h1 {
+          font-size:20px; font-style:ti; color:black;
+          font-family: 'Roboto Condensed', monospace ;
+        }
+      h2  {
+          font-size:50px;  color:black;
+          font-family: 'Roboto Condensed', monospace;
+          font-weight: normal;
+          margin: 10px;
+        }
+      #container {
+        position: fixed;
+        top: 0;
+        right:0;
+        left:0;
+        background-color: grey;
+        display: flex;
+
+
+      }
+      #box1 {
+        font-size:50px;  color:black;
+        font-family: 'Roboto Condensed', monospace;
+        width:60%;
+        margin-left: 30px;
+        padding: 10px;
+      }
+      #box2 {
+
+        width:30%
+        justify-content:flex-end;
+        padding-top: 15px;
+        margin-right: 30px;
+
+      }
+      #box3 {
+
+        width:40%
+        justify-content:flex-end;
+        padding-top: 15px;
+        margin-right: 30px;
+      }
+      #box4 {
+
+        width:40%
+        justify-content:flex-end;
+        padding-top: 15px;
+      }
+
+      #container2 {
+        display: grid;
+        position: relative;
+        top: 100px;
+      }
+      #box1cont2 {
+
+        width:70%
+
+      }
+
+      table, th {
+        border: 1px solid black;
+        font-size:50px;  color:black;
+        font-family: 'Roboto Condensed', monospace;
+      }
+
+      table, td {
+        border: 1px solid black;
+        font-size:20px;  color:black;
+        font-family: 'Roboto Condensed', monospace;
+      }
+
+      .img {
+         width: 100%;
+
+         background-position: 20% 80%;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+
+      .footer {
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+ <header> <!-- This is all the code placed in each page for the header with links -->
+      <nav id="container">
+        <img src="rmit3.png" alt="RMIT logo" style="float:left;height:70px;">
+        <a id="box1" href="index.html" >Mapping Victoria's Giant Trees </a>
+        <a id="box2" href="treevid.html"> Tree Video</a>
+        <a id="box3" href="Studentinformation.html" >Student info</a>
+        <a id="box4" href="treemap.html" > Tree map</a>
+      </nav>
+
+  </header>
+    <main>
+      <section id="container2">
+        <h2> Site information </h2>
+          <p> This site displays information and pictures to do with some of the worlds largest trees. Found right here on the doorstep of Melbourne in the Yarra Ranges as well as the Otways, East Gippsland and the Macedon Ranges.
+            Currently there is several maps and visualisations as well as general information presented on the site.
+          </p>
+          <p> This site aims to be a resource in noting the locations, health and factors influencing these trees. In the future it aims to include: entry forms for big trees found, a mapping page including overlays of fire, logging and other influences to big tree populations. </p>
+          <br>
+      </section>
+
+      <section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="https://victoriasgianttrees.weebly.com/tall-and-big-tree-news.html" target="_blank" title="Information about big trees in Victoria">
+        <img class="img" src="treecrop.jpg" alt="A really big tree" />
+        </a>
+
+        <table> <!--  This is all the code to make a very small table - i assume there is an easier way-->
+
+          <thead>
+            <caption style="font-size:50px" > Table of giant trees</caption>
+            <tr>
+              <th>Name</th>
+              <th>Species</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Slinky Sloane</td>
+              <td>E. Regnans</td>
+              <td>93m</td>
+            </tr>
+            <tr>
+              <td>​Atremis</td>
+              <td>E. Regnans</td>
+              <td>92.1m</td>
+            </tr>
+            <tr>
+              <td>Coranderrk Creek Colossus </td>
+              <td>E. Regnans</td>
+              <td>91m</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <br>
+        <h1> Some relevant links: </h1>
+        <a href="https://victoriasgianttrees.weebly.com/" target="_blank"> Victoria's Giant Trees by Brett Mifsud </a>
+        <br>
+        <a href="https://www.thetreeprojects.com/" target="_blank"> The Tree Projects </a>
+        <br>
+        <a href="https://www.nationalregisterofbigtrees.com.au/pages/home-page" target="_blank"> The Australian National Register of Big Trees </a>
+        <br>
+        <a href="https://www.rmit.edu.au/about/schools-colleges/science" target="_blank"> RMIT School of Science homepage </a>
+        <br>
+        <br>
+        <br>
+      <h1> Below is a screenshot of a 3D model derived from airborn LiDAR data, this data can be extremly useful in finding previously unknown or remote giant trees. Hopefully this data can be integrated into the site further in the future. Potentially in the form of interactive 3D models constructed from the derived point clouds and holding geometric information. </h1>
+        <img src="tree.png" alt="image of a good as tree LiDAR">
+      </section>
+    </main>
+    <div class="footer">
+      <p>Jan Corigliano 2020</p>
+    </div>
+    </body>
+ </body>
+</html>
