@@ -1,0 +1,79 @@
+<<!DOCTYPE html>
+
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"
+  ></script>
+  <script src="tree.geojson" type="text/javascript"></script>
+  <script src="mog.geojson" type="text/javascript"></script>
+  <style>
+    #map{ height: 80% }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+
+  // initialize the map
+  var map = L.map('map').setView([-37.364979, 144.533279], 9);
+
+  var bmap = L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=PlTu4U9bFTZqaRKk8CM8',
+    {
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+      maxZoom: 17,
+      minZoom: 1
+    }).addTo(map);
+    // load a tile layer
+
+  function fortrees (feature, layer) {
+    var popupText = "Name: " + feature.properties.name
+        + "<br>Species:" + feature.properties.Species
+        + "<br>Worded_location: " + feature.properties.Worded_location
+        + "<br>Circumfrence: " + feature.properties.Circumfrence
+        + "<br>Height: " + feature.properties.Height
+        + "<br>Diameter: " + feature.properties.Diameter
+        + "<br>Age_class: " + feature.properties.Age_class
+        + "<br>Discovered_by: " + feature.properties.Discovered_by
+        + "<br>Date: " + feature.properties.Date
+        + "<br>Health: " + feature.properties.Health;
+    layer.bindPopup(popupText);
+  }
+
+  function formog (feature, layer) {
+    var popupText = "Area (Ha): " + feature.properties.AREA_HA
+        + "<br>Name: " + feature.properties.NAME;
+    layer.bindPopup(popupText);
+  }
+
+  //layer control done from https://www.youtube.com/watch?v=NA5xcQSM5GA
+
+  bigtreelayer = L.geoJson(tree, {
+
+    onEachFeature: fortrees
+
+  }).addTo(map);
+
+  moglayer = L.geoJson(mog, {
+
+    onEachFeature: formog
+
+  }).addTo(map);
+
+  // group layers by basemap or overlay, can add more basemap layers later to turn on and off.
+  var Basemaps = {
+    'Terrain' : bmap
+  };
+
+  var Overlaymaps = {
+    'Giant trees' : bigtreelayer,
+    'Modelled old growth' : moglayer
+  };
+
+  L.control.layers(Basemaps, Overlaymaps).addTo(map);
+
+  </script>
+</body>
+</html>
