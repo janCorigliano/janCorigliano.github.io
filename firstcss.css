@@ -1,0 +1,126 @@
+
+  <head>
+
+    <title>Mapping Victoria's Giant Trees</title>
+
+
+
+
+    <style>
+      Body  {
+            background-color:whitesmoke;  }
+
+      header {
+        background-color: silver;
+      }
+
+
+      P  {
+          font-size:20px; font-style:ti; color:black;
+          font-family: 'Roboto Condensed', monospace ;
+
+          }
+      a  {
+          font-size:30px;  color:black;
+          font-family: 'Roboto Condensed', monospace
+
+        }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      span  {
+          font-size:50px;  color:black;
+          font-family: 'Roboto Condensed', monospace
+        }
+      h1 {
+          font-size:20px; font-style:ti; color:black;
+          font-family: 'Roboto Condensed', monospace ;
+        }
+
+      h2  {
+          font-size:30px;  color:black;
+          font-family: 'Roboto Condensed', monospace;
+          font-weight:normal;
+        }
+
+
+
+
+      #container {
+        position: fixed;
+        top: 0;
+        right:0;
+        left:0;
+        background-color: grey;
+        display: flex;
+
+
+      }
+      #box1 {
+        font-size:50px;  color:black;
+        font-family: 'Roboto Condensed', monospace;
+        width:60%;
+        margin-left: 30px;
+        padding: 10px;
+      }
+      #box2 {
+
+        width:30%
+        justify-content:flex-end;
+        padding-top: 15px;
+        margin-right: 30px;
+
+      }
+      #box3 {
+
+        width:40%
+        justify-content:flex-end;
+        padding-top: 15px;
+        margin-right: 30px;
+      }
+      #box4 {
+
+        width:40%
+        justify-content:flex-end;
+        padding-top: 15px;
+      }
+
+      #container2 {
+        display: grid;
+        position:;
+        top: 100px;
+      }
+
+      #box1cont2 {
+
+        width:70%
+
+      }
+
+      #foremail{
+        font-size:30px;
+      }
+
+      .footer {
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        color: white;
+        text-align: center;
+      }
